@@ -1,0 +1,15 @@
+<% if @range == "User" %>
+<h2>Results index user "<%= @word %>"</h2>
+ <% else %>
+ <h2>Results index "<%= @word %>"</h2>
+ <% end %>
+<table class="table table-hover table-inverse">
+ 
+  <% if @range == "User" %>
+   <%= render 'users/index',users: @users %>
+  <% else %>
+  
+   <%= render 'books/index', books: @books%>
+    
+  <% end %>
+</table>
